@@ -1,0 +1,61 @@
+camera calibration for distorted images with chess board samples
+reads distorted images, calculates the calibration and write undistorted images
+
+usage:
+    calibrate.py [--debug <output path>] [--square_size] [<image mask>]
+
+default values:
+    --debug:    ./output/
+    --square_size: 1.0
+    <image mask> defaults to ../data/left*.jpg
+
+Run with 4 threads...
+processing ../data/left09.jpg...
+processing ../data/left08.jpg...
+processing ../data/left14.jpg...
+processing ../data/left01.jpg...
+           ../data/left08.jpg... OK
+processing ../data/left03.jpg...
+           ../data/left01.jpg... OK
+processing ../data/left02.jpg...
+           ../data/left03.jpg... OK
+processing ../data/left12.jpg...
+           ../data/left14.jpg... OK
+processing ../data/left06.jpg...
+           ../data/left09.jpg... OK
+processing ../data/left07.jpg...
+           ../data/left12.jpg... OK
+processing ../data/left13.jpg...
+           ../data/left07.jpg... OK
+processing ../data/left05.jpg...
+           ../data/left02.jpg... OK
+processing ../data/left11.jpg...
+           ../data/left13.jpg... OK
+processing ../data/left04.jpg...
+           ../data/left05.jpg... OK
+           ../data/left06.jpg... OK
+           ../data/left04.jpg... OK
+           ../data/left11.jpg... OK
+
+RMS: 0.19643790890334048
+camera matrix:
+ [[532.79536562   0.         342.45825163]
+ [  0.         532.91928338 233.90060514]
+ [  0.           0.           1.        ]]
+distortion coefficients:  [-2.81086258e-01  2.72581009e-02  1.21665908e-03 -1.34204274e-04
+  1.58514023e-01]
+
+Undistorted image written to: ./output/left09_undistorted.png
+Undistorted image written to: ./output/left08_undistorted.png
+Undistorted image written to: ./output/left14_undistorted.png
+Undistorted image written to: ./output/left01_undistorted.png
+Undistorted image written to: ./output/left03_undistorted.png
+Undistorted image written to: ./output/left02_undistorted.png
+Undistorted image written to: ./output/left12_undistorted.png
+Undistorted image written to: ./output/left06_undistorted.png
+Undistorted image written to: ./output/left07_undistorted.png
+Undistorted image written to: ./output/left13_undistorted.png
+Undistorted image written to: ./output/left05_undistorted.png
+Undistorted image written to: ./output/left11_undistorted.png
+Undistorted image written to: ./output/left04_undistorted.png
+Done
